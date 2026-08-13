@@ -2,17 +2,7 @@
 
 Sitio web de Turismo para la agencia ficticia **AstroTurismo**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
 
-## Screenshots📸
-
-![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro1.png)
-
-![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro2.png)
-
-![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro3.png)
-
-![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro4.png)
-
-## STACK ⚡
+Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ventana de un observatorio espacial**: glassmorphism profundo, retículas de telescopio, telemetría en vivo y animaciones que imitan la óptica de un ocular.
 
 ![Stack](https://img.shields.io/badge/Astro-5-ff5d01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?logo=tailwindcss&logoColor=white)
@@ -86,6 +76,8 @@ scripts/                       # build.mjs (wrapper de build para Windows)
 ```
 
 ## 🎨 Sistema de diseño
+
+Documentado en **[`DESIGN.md`](./DESIGN.md)** — "Technological Romanticism": glassmorphism + minimalismo.
 
 - **Colores:** Obsidian Black `#020305` (fondo), Deep Midnight Blue `#05070A` (contenedores), Aurora Teal `#00F5FF` (acción primaria), Celestial Purple `#BC13FE` (acento premium).
 - **Tipografía:** Montserrat (títulos) + Inter (UI), con etiquetas `label-sm` (mayúsculas + tracking) y dígitos tabulares (`hud-tnum`) para datos.
