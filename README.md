@@ -1,8 +1,7 @@
-# Astraea Expeditions — Stargazing Expeditions
+# AstroTurismo. 🛩️
 
-Sitio web de astroturismo para la agencia ficticia **Astraea Expeditions**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
+Sitio web de Turismo para la agencia ficticia **AstroTurismo**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
 
-Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ventana de un observatorio espacial**: glassmorphism profundo, retículas de telescopio, telemetría en vivo y animaciones que imitan la óptica de un ocular.
 
 ![Stack](https://img.shields.io/badge/Astro-5-ff5d01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?logo=tailwindcss&logoColor=white)
@@ -14,7 +13,6 @@ Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ven
 
 ## ✨ Características
 
-- **Fondo estelar en canvas** — campo de estrellas que titilan (`gsap.ticker`) con parallax al hacer scroll (`ScrollTrigger`). Respeta `prefers-reduced-motion`.
 - **Visor de constelaciones interactivo** — tres constelaciones (Orión, Osa Mayor, Casiopea) con:
   - Parallax que sigue el cursor (efecto lente con perspectiva).
   - Retícula de mira con telemetría **RA/DEC en vivo**.
@@ -36,7 +34,7 @@ Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ven
 | **GSAP 3.15** | Animaciones: ScrollTrigger, ticker, quickTo, dibujado de líneas |
 | **TypeScript** | Tipado estricto (`astro/tsconfigs/strict`) |
 
-## 🚀 Puesta en marcha
+## 🚀 Instalación
 
 Requisitos: **Node.js ≥ 18**.
 
@@ -78,7 +76,6 @@ scripts/                       # build.mjs (wrapper de build para Windows)
 
 ## 🎨 Sistema de diseño
 
-Documentado en **[`DESIGN.md`](./DESIGN.md)** — "Technological Romanticism": glassmorphism + minimalismo.
 
 - **Colores:** Obsidian Black `#020305` (fondo), Deep Midnight Blue `#05070A` (contenedores), Aurora Teal `#00F5FF` (acción primaria), Celestial Purple `#BC13FE` (acento premium).
 - **Tipografía:** Montserrat (títulos) + Inter (UI), con etiquetas `label-sm` (mayúsculas + tracking) y dígitos tabulares (`hud-tnum`) para datos.
@@ -93,10 +90,6 @@ Documentado en **[`DESIGN.md`](./DESIGN.md)** — "Technological Romanticism": g
 
 **Animar una sección** → añade el atributo `data-reveal` al bloque y GSAP lo anima automáticamente.
 
-## 📄 Guía de desarrollo
-
-`GUIA_DEL_PROYECTO.pdf` (en la raíz) explica en detalle la arquitectura, el flujo de las islas React, la integración de GSAP y los problemas frecuentes — ideal para continuar programando por tu cuenta.
-
 ## 📄 Licencia
 
-Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas para este proyecto.
+Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas con IA para este proyecto.
