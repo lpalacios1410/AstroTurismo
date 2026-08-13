@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020305"/>
+      <stop offset="1" stop-color="#0a1224"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0" stop-color="#00F5FF" stop-opacity="0"/>
+      <stop offset="0.4" stop-color="#00F5FF" stop-opacity="0.55"/>
+      <stop offset="0.75" stop-color="#4ade80" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="ribbon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#sky)"/>
+
+  <g fill="#EAF2FF">
+    <circle cx="90" cy="90" r="1.4" opacity="0.7"/>
+    <circle cx="180" cy="200" r="1" opacity="0.5"/>
+    <circle cx="320" cy="70" r="1.6" opacity="0.8"/>
+    <circle cx="470" cy="140" r="1.1" opacity="0.55"/>
+    <circle cx="540" cy="60" r="1.3" opacity="0.7"/>
+    <circle cx="250" cy="320" r="1" opacity="0.45"/>
+    <circle cx="60" cy="300" r="1.2" opacity="0.6"/>
+    <circle cx="420" cy="260" r="1" opacity="0.5"/>
+    <circle cx="510" cy="330" r="1.4" opacity="0.65"/>
+    <circle cx="150" cy="420" r="1" opacity="0.4"/>
+  </g>
+
+  <path d="M-40 380 Q 140 210 340 330 T 660 280 L 660 520 L -40 520 Z" fill="url(#aurora)" filter="url(#soft)" opacity="0.8"/>
+  <path d="M-40 420 C 120 260 260 380 420 300 C 520 248 600 320 660 300" fill="none" stroke="url(#aurora)" stroke-width="70" stroke-linecap="round" filter="url(#ribbon)" opacity="0.85"/>
+  <path d="M-40 470 C 160 320 340 440 520 360 C 580 330 620 360 660 350" fill="none" stroke="url(#aurora)" stroke-width="34" stroke-linecap="round" filter="url(#ribbon)" opacity="0.7"/>
+
+  <circle cx="300" cy="120" r="26" fill="#EAF2FF" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="300" cy="120" r="10" fill="#EAF2FF" opacity="0.9"/>
+  <circle cx="300" cy="120" r="3" fill="#ffffff"/>
+
+  <path d="M0 800 L0 620 L80 560 L150 600 L230 540 L300 585 L380 520 L450 570 L520 540 L600 590 L600 800 Z" fill="#05070A"/>
+  <path d="M0 800 L0 700 L90 650 L180 690 L270 640 L360 680 L470 640 L560 680 L600 660 L600 800 Z" fill="#020305"/>
+</svg>
