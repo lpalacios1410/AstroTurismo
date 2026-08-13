@@ -2,6 +2,18 @@
 
 Sitio web de Turismo para la agencia ficticia **AstroTurismo**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
 
+## Screenshots📸
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro1.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro2.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro3.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro4.png)
+
+
+## STACK ⚡
 
 ![Stack](https://img.shields.io/badge/Astro-5-ff5d01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?logo=tailwindcss&logoColor=white)
@@ -82,14 +94,15 @@ scripts/                       # build.mjs (wrapper de build para Windows)
 - **Elevación:** L0 fondo estelar → L1 contenedores → L2 cristal (`surface-glass`) → L3 elementos activos con glow.
 - **Shapes:** botones pill (`rounded-xl`), tarjetas de vidrio (`rounded-lg`), selectores circulares.
 
-## 🧩 Cómo extender
+## Deployment
 
-**Agregar un destino** → crea el SVG de aurora en `public/images/` y añade un objeto en `src/data/destinations.ts` respetando el tipo `Destination`.
+Deployed on [Vercel](https://vercel.com) with automated daily deploys via GitHub Actions.
 
-**Agregar una constelación** → amplía el union type del `id` en `src/types/constellation.ts` y añade el objeto en `src/data/constellations.ts` (estrellas con coordenadas normalizadas 0–100 y líneas por índice).
+## Author 📄
 
-**Animar una sección** → añade el atributo `data-reveal` al bloque y GSAP lo anima automáticamente.
+**Luis Palacios** — [@lpalacios1410](https://github.com/lpalacios1410)
 
-## 📄 Licencia
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/luis-palacios-739b1b15a)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:luisarmando20092009@gmail.com)
 
-Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas con IA para este proyecto.
+**Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas con IA para este proyecto.**
