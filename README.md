@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AstroTurismo. 🛩️
 
 Sitio web de Turismo para la agencia ficticia **AstroTurismo**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
@@ -96,3 +97,7 @@ Deployed on [Vercel](https://vercel.com) with automated daily deploys via GitHub
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:luisarmando20092009@gmail.com)
 
 **Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas con IA para este proyecto.**
+=======
+# AstroExpeditions
+A small landing page requested for selling travel packages to locations for viewing the aurora borealis, meteor showers, total eclipses, and the Milky Way with the naked eye.
+>>>>>>> bba5bc7b4305caedbd7a6e803762e7221a824481
