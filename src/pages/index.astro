@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/common/Header.astro";
+import Footer from "../components/common/Footer.astro";
+import Button from "../components/common/Button.astro";
+import Hero from "../components/hero/Hero.astro";
+import ConstellationViewer from "../components/constellations/ConstellationViewer";
+import DestinationsGrid from "../components/destinations/DestinationsGrid.astro";
+import FeaturesGrid from "../components/features/FeaturesGrid.astro";
+---
+
+<Layout>
+  <Header />
+
+  <main>
+    <Hero />
+
+    <!-- Visor interactivo -->
+    <section id="visor" class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div
+        class="flex flex-col justify-between gap-6 md:flex-row md:items-end"
+        data-reveal
+      >
+        <div class="max-w-2xl">
+          <h2
+            class="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-5xl"
+          >
+            El cielo de esta{" "}
+            <span class="text-celestial-teal">noche</span>
+          </h2>
+        </div>
+        <p class="max-w-sm leading-relaxed text-celestial-muted">
+          Selecciona una constelación o pasa el cursor por las estrellas para
+          leer su telemetría.
+        </p>
+      </div>
+
+      <div class="mt-14">
+        <ConstellationViewer client:load />
+      </div>
+    </section>
+
+    <DestinationsGrid />
+
+    <FeaturesGrid />
+
+    <!-- Llamada a la acción -->
+    <section id="reservar" class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <div
+        class="surface-glass relative overflow-hidden px-8 py-16 text-center md:py-24"
+        data-reveal
+      >
+        <div
+          class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(0,245,255,0.08),transparent_70%)]"
+          aria-hidden="true"
+        >
+        </div>
+        <img
+          src="/svg/orion-lines.svg"
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute left-1/2 top-1/2 w-[min(90%,700px)] -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
+        />
+        <p class="hud-tnum label-sm text-celestial-teal">
+          Expedición 2026 · Plazas limitadas
+        </p>
+        <h2
+          class="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold leading-tight text-white md:text-6xl"
+        >
+          Listo para ver la{" "}
+          <span class="text-celestial-teal">Vía Láctea</span>?
+        </h2>
+        <p class="mx-auto mt-6 max-w-xl leading-relaxed text-celestial-muted">
+          Nuestras expediciones salen entre septiembre y marzo, cuando la aurora
+          alcanza su máximo. Escríbenos y prepara tu ventana al universo.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <Button href="mailto:hola@astraea.example" size="lg">
+            Reservar plaza
+          </Button>
+          <Button href="#destinos" variant="secondary" size="lg">
+            Explorar destinos
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script>
+    import { gsap } from "../utils/gsap";
+
+    const items = gsap.utils.toArray<HTMLElement>("[data-reveal]");
+    items.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 85%" },
+        },
+      );
+    });
+  </script>
+</Layout>

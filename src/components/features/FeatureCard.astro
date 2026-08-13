@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div
+  class="surface-glass group relative overflow-hidden p-8 transition-all duration-500 hover:border-celestial-purple/40 hover:shadow-glow-purple"
+>
+  <span
+    class="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-celestial-teal/50 bg-celestial-teal/5 text-celestial-teal shadow-neon-teal transition-transform duration-500 group-hover:scale-110"
+  >
+    <slot name="icon" />
+  </span>
+  <h3 class="font-display text-xl font-bold text-white">{title}</h3>
+  <p class="mt-3 text-sm leading-relaxed text-celestial-muted">
+    {description}
+  </p>
+</div>

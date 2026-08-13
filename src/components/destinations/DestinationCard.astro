@@ -1,0 +1,62 @@
+---
+import type { Destination } from '../../types/destination';
+import { bortleLabel } from '../../data/destinations';
+
+interface Props {
+  destination: Destination;
+}
+
+const { destination } = Astro.props;
+const premium = destination.bortleClass === 1;
+---
+
+<article
+  class="group surface-glass overflow-hidden transition-all duration-500 hover:border-celestial-teal/40 hover:shadow-glow-teal"
+>
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <img
+      src={destination.image}
+      alt={`Cielo nocturno sobre ${destination.title}`}
+      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      loading="lazy"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-celestial-bg via-transparent to-transparent"
+      aria-hidden="true"
+    ></div>
+    <div class="absolute left-4 top-4">
+      <span
+        class:list={[
+          'inline-flex items-center gap-2 rounded-full border px-3 py-1.5 backdrop-blur-md',
+          premium
+            ? 'border-celestial-purple/60 bg-celestial-bg/60 text-celestial-purple shadow-neon-purple'
+            : 'border-celestial-teal/40 bg-celestial-bg/60 text-celestial-teal',
+        ]}
+      >
+        <span class="hud-tnum label-sm">Bortle {destination.bortleClass}</span>
+        <span class="text-[0.6rem] uppercase tracking-[0.15em] opacity-80">
+          {bortleLabel[destination.bortleClass]}
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-6">
+    <p class="hud-tnum label-sm text-celestial-muted">{destination.location}</p>
+    <h3 class="mt-3 font-display text-2xl font-bold text-white">
+      {destination.title}
+    </h3>
+    <p class="mt-3 text-sm leading-relaxed text-celestial-muted">
+      {destination.description}
+    </p>
+    <a
+      href="#reservar"
+      class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-celestial-teal transition-colors duration-300 hover:text-white"
+    >
+      Ver expediciones
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+</article>
