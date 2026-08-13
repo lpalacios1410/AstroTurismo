@@ -1,0 +1,29 @@
+---
+import { destinations } from '../../data/destinations';
+import DestinationCard from './DestinationCard.astro';
+---
+
+<section id="destinos" class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+  <div class="max-w-2xl" data-reveal>
+    <p class="label-sm text-celestial-purple">Destinos · Bortle clase 1 y 2</p>
+    <h2 class="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+      Tres ventanas a la{' '}
+      <span class="text-celestial-teal">noche más profunda</span>
+    </h2>
+    <p class="mt-5 leading-relaxed text-celestial-muted">
+      Seleccionamos cada base por una sola razón: que el cielo sea el
+      protagonista. Sin luces, sin tráfico aéreo, sin nada entre tú y el
+      universo.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {
+      destinations.map((destination) => (
+        <div data-reveal>
+          <DestinationCard destination={destination} />
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,78 @@
+---
+import FeatureCard from './FeatureCard.astro';
+---
+
+<section id="experiencia" class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+  <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end" data-reveal>
+    <div class="max-w-2xl">
+      <p class="label-sm text-celestial-purple">La experiencia</p>
+      <h2 class="mt-5 font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+        Equipamiento de{' '}
+        <span class="text-celestial-teal">observatorio</span>, no de hotel
+      </h2>
+    </div>
+    <p class="max-w-sm leading-relaxed text-celestial-muted">
+      Cada expedición opera como una misión: bases climatizadas, astrónomos de
+      guardia y cielos garantizados por desplazamiento táctico.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div data-reveal>
+      <FeatureCard
+        title="Astrofotografía guiada"
+        description="Telescopios con seguimiento ecuatorial y asesoría para capturar la Vía Láctea con tu propia cámara."
+      >
+        <svg slot="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="12" cy="13.5" r="4" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="12" cy="13.5" r="1.5" fill="currentColor" />
+          <path d="M8.5 7l1.2-2h4.6l1.2 2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+      </FeatureCard>
+    </div>
+
+    <div data-reveal>
+      <FeatureCard
+        title="Cero contaminación lumínica"
+        description="Reservas certificadas Bortle clase 1 y 2: los cielos más oscuros del planeta, a una hora de la civilización."
+      >
+        <svg slot="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </FeatureCard>
+    </div>
+
+    <div data-reveal>
+      <FeatureCard
+        title="Científicos residentes"
+        description="Astrónomos de guardia responden tus preguntas y guían cada observación con láseres y telescopios de gran apertura."
+      >
+        <svg slot="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 20l5-9 3 5 2-3 6 7H4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          <path d="M16.5 7.5a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z" stroke="currentColor" stroke-width="1.5" />
+          <path d="M16.5 7.5L20 4" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </FeatureCard>
+    </div>
+
+    <div data-reveal>
+      <FeatureCard
+        title="Clima monitorizado"
+        description="Pronóstico de despeje en tiempo real y desplazamiento táctico para mover la expedición al mejor cielo disponible."
+      >
+        <svg slot="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
+          <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="12" cy="12" r="1" fill="currentColor" />
+          <path d="M12 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </FeatureCard>
+    </div>
+  </div>
+</section>

@@ -1,8 +1,18 @@
-# Astraea Expeditions — Stargazing Expeditions
+# AstroTurismo. 🛩️
 
-Sitio web de astroturismo para la agencia ficticia **Astraea Expeditions**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
+Sitio web de Turismo para la agencia ficticia **AstroTurismo**, especializada en llevar viajeros a los cielos más oscuros del planeta (Bortle clase 1 y 2) para observar auroras boreales, lluvias de meteoros, eclipses totales y la Vía Láctea.
 
-Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ventana de un observatorio espacial**: glassmorphism profundo, retículas de telescopio, telemetría en vivo y animaciones que imitan la óptica de un ocular.
+## Screenshots📸
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro1.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro2.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro3.png)
+
+![image alt](https://github.com/lpalacios1410/AstroTurismo/blob/5fad7b65f4500c1c97499cba1da0e401da39fd8a/public/Astro4.png)
+
+## STACK ⚡
 
 ![Stack](https://img.shields.io/badge/Astro-5-ff5d01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?logo=tailwindcss&logoColor=white)
@@ -14,7 +24,6 @@ Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ven
 
 ## ✨ Características
 
-- **Fondo estelar en canvas** — campo de estrellas que titilan (`gsap.ticker`) con parallax al hacer scroll (`ScrollTrigger`). Respeta `prefers-reduced-motion`.
 - **Visor de constelaciones interactivo** — tres constelaciones (Orión, Osa Mayor, Casiopea) con:
   - Parallax que sigue el cursor (efecto lente con perspectiva).
   - Retícula de mira con telemetría **RA/DEC en vivo**.
@@ -28,15 +37,15 @@ Lejos de un sitio de viajes tradicional, el sitio se siente como **operar la ven
 
 ## 🛠️ Stack
 
-| Herramienta | Rol |
-| --- | --- |
-| **Astro 5** | Framework de contenido / renderizado estático |
-| **Tailwind CSS 3.4** | Estilos y tokens de diseño (`tailwind.config.ts`) |
-| **React 19** | Islas interactivas (visor y fondo estelar) |
-| **GSAP 3.15** | Animaciones: ScrollTrigger, ticker, quickTo, dibujado de líneas |
-| **TypeScript** | Tipado estricto (`astro/tsconfigs/strict`) |
+| Herramienta          | Rol                                                             |
+| -------------------- | --------------------------------------------------------------- |
+| **Astro 5**          | Framework de contenido / renderizado estático                   |
+| **Tailwind CSS 3.4** | Estilos y tokens de diseño (`tailwind.config.ts`)               |
+| **React 19**         | Islas interactivas (visor y fondo estelar)                      |
+| **GSAP 3.15**        | Animaciones: ScrollTrigger, ticker, quickTo, dibujado de líneas |
+| **TypeScript**       | Tipado estricto (`astro/tsconfigs/strict`)                      |
 
-## 🚀 Puesta en marcha
+## 🚀 Instalación
 
 Requisitos: **Node.js ≥ 18**.
 
@@ -78,25 +87,20 @@ scripts/                       # build.mjs (wrapper de build para Windows)
 
 ## 🎨 Sistema de diseño
 
-Documentado en **[`DESIGN.md`](./DESIGN.md)** — "Technological Romanticism": glassmorphism + minimalismo.
-
 - **Colores:** Obsidian Black `#020305` (fondo), Deep Midnight Blue `#05070A` (contenedores), Aurora Teal `#00F5FF` (acción primaria), Celestial Purple `#BC13FE` (acento premium).
 - **Tipografía:** Montserrat (títulos) + Inter (UI), con etiquetas `label-sm` (mayúsculas + tracking) y dígitos tabulares (`hud-tnum`) para datos.
 - **Elevación:** L0 fondo estelar → L1 contenedores → L2 cristal (`surface-glass`) → L3 elementos activos con glow.
 - **Shapes:** botones pill (`rounded-xl`), tarjetas de vidrio (`rounded-lg`), selectores circulares.
 
-## 🧩 Cómo extender
+## Deployment
 
-**Agregar un destino** → crea el SVG de aurora en `public/images/` y añade un objeto en `src/data/destinations.ts` respetando el tipo `Destination`.
+Deployed on [Vercel](https://vercel.com) with automated daily deploys via GitHub Actions.
 
-**Agregar una constelación** → amplía el union type del `id` en `src/types/constellation.ts` y añade el objeto en `src/data/constellations.ts` (estrellas con coordenadas normalizadas 0–100 y líneas por índice).
+## Author 📄
 
-**Animar una sección** → añade el atributo `data-reveal` al bloque y GSAP lo anima automáticamente.
+**Luis Palacios** — [@lpalacios1410](https://github.com/lpalacios1410)
 
-## 📄 Guía de desarrollo
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/luis-palacios-739b1b15a)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:luisarmando20092009@gmail.com)
 
-`GUIA_DEL_PROYECTO.pdf` (en la raíz) explica en detalle la arquitectura, el flujo de las islas React, la integración de GSAP y los problemas frecuentes — ideal para continuar programando por tu cuenta.
-
-## 📄 Licencia
-
-Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas para este proyecto.
+**Proyecto educativo ficticio. Las imágenes de destino son ilustraciones SVG generadas con IA para este proyecto.**

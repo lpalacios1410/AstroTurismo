@@ -1,0 +1,71 @@
+---
+const links = [
+  { href: '#destinos', label: 'Destinos' },
+  { href: '#visor', label: 'Visor' },
+  { href: '#experiencia', label: 'Experiencia' },
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-50 px-4">
+  <nav
+    id="site-nav"
+    class="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-xl border border-white/10 bg-celestial-card/40 px-5 py-3 backdrop-blur-xl transition-all duration-300"
+  >
+    <a href="#inicio" class="flex items-center gap-2.5">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M12 2c.9 5.4 4.6 9.1 10 10-5.4.9-9.1 4.6-10 10-.9-5.4-4.6-9.1-10-10 5.4-.9 9.1-4.6 10-10Z"
+          fill="#00F5FF"
+        />
+        <circle cx="19.5" cy="17.5" r="1.5" fill="#BC13FE" />
+      </svg>
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-base font-bold tracking-wide text-white"
+          >Astraea</span
+        >
+        <span class="label-sm text-celestial-muted">Expeditions</span>
+      </span>
+    </a>
+
+    <ul class="hidden items-center gap-8 md:flex">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="label-sm text-celestial-muted transition-colors duration-300 hover:text-celestial-teal"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a
+      href="#reservar"
+      class="hidden items-center rounded-xl border border-celestial-teal/60 px-5 py-2 text-sm font-medium text-celestial-teal transition-all duration-300 hover:bg-celestial-teal/5 hover:shadow-neon-teal md:inline-flex"
+    >
+      Reservar
+    </a>
+  </nav>
+</header>
+
+<style>
+  #site-nav {
+    background-color: rgba(5, 7, 10, 0.55);
+  }
+  #site-nav.nav-condensed {
+    background-color: rgba(5, 7, 10, 0.85);
+    box-shadow:
+      0 0 20px rgba(0, 245, 255, 0.08),
+      0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+<script>
+  const nav = document.querySelector('#site-nav');
+  const onScroll = () => nav?.classList.toggle('nav-condensed', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

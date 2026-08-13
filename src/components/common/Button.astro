@@ -1,0 +1,29 @@
+---
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "md" | "lg";
+}
+
+const { href = "#", variant = "primary", size = "md" } = Astro.props;
+
+const variants = {
+  primary:
+    "bg-celestial-teal text-celestial-bg font-semibold shadow-neon-teal hover:shadow-neon-hover hover:brightness-110",
+  secondary:
+    "border border-celestial-teal/60 text-celestial-teal hover:bg-celestial-teal/5 hover:shadow-neon-teal",
+  ghost: "text-celestial-muted hover:text-celestial-teal",
+};
+
+const sizes: Record<NonNullable<Props["size"]>, string> = {
+  md: "px-6 py-3 text-sm",
+  lg: "px-8 py-4 text-base",
+};
+---
+
+<a
+  href={href}
+  class={`inline-flex items-center justify-center gap-2 rounded-xl font-sans transition-all duration-300 ${variants[variant]} ${sizes[size]}`}
+>
+  <slot />
+</a>

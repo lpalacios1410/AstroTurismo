@@ -1,0 +1,66 @@
+---
+import StarBackground from "./StarBackground";
+import Button from "../common/Button.astro";
+---
+
+<section
+  id="inicio"
+  class="relative flex min-h-svh items-center overflow-hidden"
+>
+  <div class="absolute inset-0">
+    <StarBackground client:load />
+  </div>
+
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_40%,rgba(0,245,255,0.05),transparent_70%)]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 pt-36">
+    <p class="label-sm text-celestial-teal" data-reveal>
+      Expediciones de astroturismo · Lofoten, Noruega
+    </p>
+
+    <h1
+      class="mt-8 max-w-5xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+      data-reveal
+    >
+      Observa el universo{" "}
+      <span
+        class="bg-gradient-to-r from-celestial-teal via-[#7dd3fc] to-celestial-purple bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(0,245,255,0.25)]"
+      >
+        como debe verse
+      </span>
+      .
+    </h1>
+
+    <p
+      class="mt-8 max-w-xl text-lg leading-relaxed text-celestial-muted"
+      data-reveal
+    >
+      Llevamos a viajeros a los cielos más oscuros del planeta — Bortle clase 1
+      y 2 — para observar auroras boreales, lluvias de meteoros, eclipses
+      totales y la Vía Láctea a simple vista.
+    </p>
+
+    <div class="mt-12 flex flex-wrap items-center gap-4" data-reveal>
+      <Button href="#reservar" size="lg">Reservar expedición</Button>
+      <Button href="#visor" variant="secondary" size="lg">Abrir el visor</Button
+      >
+    </div>
+  </div>
+
+  <div
+    class="absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-3"
+    data-reveal
+  >
+    <span class="label-sm text-celestial-muted">Desliza para observar</span>
+    <div
+      class="flex h-10 w-6 items-start justify-center rounded-full border border-white/20 p-1.5"
+    >
+      <span class="h-2 w-1 animate-bounce rounded-full bg-celestial-teal"
+      ></span>
+    </div>
+  </div>
+</section>
